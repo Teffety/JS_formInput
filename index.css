@@ -1,0 +1,122 @@
+:root {
+  --posH1: 30px;
+  --posW1: 350px;
+  --color-black: rgba(0, 0, 0);
+  --color-black1: rgba(0, 0, 0, 0.5);
+  --color-black2: rgba(0, 0, 0, 0.2);
+  --color-another: rgba(255, 174, 18, 0.77);
+  --color-another2: rgba(255, 72, 32, 0.9);
+}
+
+.main {
+  display: grid;
+}
+
+.load {
+  opacity: 0 !important;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.wrapper {
+  width: 1092px;
+  margin: 0 auto;
+  grid-template-columns: repeat(11, 80px) !important;
+  grid-column-gap: 12px !important;
+}
+
+header {
+  grid-column-start: 4 !important;
+  grid-column-end: 9 !important;
+}
+
+.form {
+  display: grid;
+  grid-gap: 30px;
+  justify-content: center;
+  padding-top: 2%;
+  padding-bottom: 5%;
+}
+
+header span {
+  padding-top: 2%;
+  font-size: 1.5em;
+}
+
+main {
+  grid-column-start: 4 !important;
+  grid-column-end: 9 !important;
+}
+
+.elem .image, .elem label, .elem p, .elem span {
+  position: absolute !important;
+}
+
+.elem {
+  height: var(--posH1);
+  width: var(--posW1);
+  position: relative;
+}
+
+.elem:hover {
+  background: var(--color-black2);
+  border-radius: 20px 0px 50px 0px;
+  color: var(--color-another2);
+}
+
+.elem label, .elem p {
+  left: calc(var(--posH1)*2);
+}
+
+.elem span {
+  right: 2%;
+}
+
+.elem p {
+  color: var(--color-black1);
+}
+
+.divForSpan {
+  padding: 50px;
+}
+
+.divForSpan span {
+  font-size: 1.2em;
+  color: var(--color-black);
+}
+
+.divForSpan span:hover {
+  color: var(--color-another);
+}
+
+footer{
+  grid-column-start: 4!important;
+   grid-column-end: 9!important;
+}
+
+@media all and (max-width:819px){
+  .wrapper {
+
+    margin: 0 auto;
+    grid-template-columns: repeat(11, 60px) !important;
+    grid-column-gap: 9px !important;
+  }
+}
+
+@media all and (max-width:600px){
+  .wrapper {
+    width: 600px;
+    margin: 0 auto;
+    grid-template-columns: repeat(11, 46px) !important;
+    grid-column-gap: 6px !important;
+  }
+}
+@media all and (max-width:420px){
+  .wrapper {
+    width: 300px;
+    margin: 0 auto;
+    grid-template-columns: repeat(11, 30px) !important;
+    grid-column-gap: 3px !important;
+  }
+}

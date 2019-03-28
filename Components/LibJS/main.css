@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css?family=Marck+Script|Pattaya|Ruslan+Display');
+@import url('https://fonts.googleapis.com/css?family=Poiret+One');
+
+:root {
+  --font-text-Oswald: 'Oswald', sans-serif;
+  --font-text-Pacifico: 'Pacifico', cursive;
+  --font-text-OldStandart: 'Old Standard TT', serif;
+  --font-text-Pattaya: Pattaya, fantasy;
+  --font-text-Ruslan: 'Ruslan', sans-serif;
+  --font-text-Playfair: 'Playfair Display SC', serif;
+  --col-1st: black;
+  --col-2nd: white;
+  --col-3d: rgba(55, 55, 55, 0.61);
+  --col-4d: rgba(27, 26, 26, 0.87);
+  --text-s1: 2em;
+  --text-s2: 1.5em;
+  --col-lin-grad1: lineral-gradient(90deg, #03a9f4, #);
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  display: block;
+  position: relative;
+}
+
+.wrapper {
+  display: grid;
+  grid-template: auto 1fr auto/100%;
+  min-height: 100%;
+  position: relative;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+}
+
+a {
+  text-decoration: none;
+}
+
+.imForDoc {
+  width: 25px;
+  height: 25px;
+}
+
+.divImg {
+  width: 300px;
+  height: 300px;
+  max-width: 600px;
+}
+
+.imageCard {
+  width: 100%;
+  height: 100%;
+}
+
+.nav {
+  grid-area: 1;
+  display: grid;
+  align-items: center;
+}
+
+nav {
+  display: grid;
+  grid-auto-flow: column;
+  margin-left: 5%;
+  margin-top: 3%;
+  grid-gap: 4em;
+}
+
+nav a {
+  font-family: var(--font-text-Pattaya);
+  color: var(--col-1st);
+  text-transform: capitalize;
+  font-size: 2.5vh;
+  letter-spacing: 1px;
+}
+
+nav a:hover {
+  color: var(--col-2nd);
+}
+
+.carusel {
+  max-width: 800px;
+  height: 500px;
+  position: relative;
+  margin: auto;
+  display: grid;
+}
+
+.blocks {
+  height: 500px;
+  text-align: center;
+}
+
+.image {
+  width: auto;
+  max-width: auto;
+  height: 100%;
+  justify-content: center;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 2s;
+  animation-name: fade;
+  animation-duration: 2s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: .3
+  }
+
+  to {
+    opacity: 1
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: .3
+  }
+
+  to {
+    opacity: 1
+  }
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next, .text {
+    font-size: 11px
+  }
+
+  ;
+
+  .nav a {
+    font-size: 1.5vh;
+  }
+
+  ;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: var(--col-4d);
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 50%;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 50%;
+}
+
+.prev:hover, .next:hover {
+  border-radius: 50%;
+  background-color: var(--col-3d);
+  color: var(--col-2nd);
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 2s;
+  animation-name: fade;
+  animation-duration: 2s;
+}
+
+.main {
+  grid-area: 2;
+  display: grid;
+
+  grid-template: auto auto auto/90%;
+  justify-content: center;
+}
+
+
+
+input:hover:-webkit-input-placeholder {
+  color: var(--col-3d);
+  -o-transition: all 0.5s ease-in;
+  -moz-transition: all 0.5s ease-in;
+  -webkit-transition: all 0.5s ease-in;
+  transition: all 0.5s ease-in;
+}
+
+input:hover:-moz-placeholder {
+  color: var(--col-3d);
+  -o-transition: all 0.5s ease-in;
+  -moz-transition: all 0.5s ease-in;
+  -webkit-transition: all 0.5s ease-in;
+  transition: all 0.5s ease-in;
+}
+
+input:hover::-webkit-input-placeholder {
+  color: var(--col-3d);
+  -o-transition: all 0.5s ease-in;
+  -moz-transition: all 0.5s ease-in;
+  -webkit-transition: all 0.5s ease-in;
+  transition: all 0.5s ease-in;
+}
+
+input:hover::-moz-placeholder {
+  color: var(--col-3d);
+  -o-transition: all 0.5s ease-in;
+  -moz-transition: all 0.5s ease-in;
+  -webkit-transition: all 0.5s ease-in;
+  transition: all 0.5s ease-in;
+}
+
+.footer {
+  height: 50px;
+  justify-content: flex-end;
+  grid-template: 100%/auto auto;
+}
+
+header {
+  grid-area: 1;
+  display: grid;
+  align-items: center;
+  position: relative;
+  justify-content: center;
+}
+
+main {
+  grid-area: 2;
+  display: grid;
+
+  position: relative;
+  justify-content: center;
+}
+
+footer {
+  grid-area: 3;
+  display: grid;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+}
+
+footer a {
+  color: var(--col-1st);
+}
