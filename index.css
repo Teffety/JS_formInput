@@ -54,7 +54,7 @@ main {
 }
 
 .elem {
-  height:(var(--posH1);
+  height:var(--posH1);
   width: var(--posW1);
   position: relative;
 }
