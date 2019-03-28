@@ -54,16 +54,16 @@ main {
 }
 
 .elem {
-  height: calc(var(--posH1)+10);
+  height:(var(--posH1);
   width: var(--posW1);
   position: relative;
 }
 
-.elem:hover {
+/*.elem:hover {
   background: var(--color-black2);
   border-radius: 20px 0px 50px 0px;
   color: var(--color-another2);
-}
+}*/
 
 .elem label, .elem p {
   left: calc(var(--posH1)*2);
