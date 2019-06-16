@@ -5,7 +5,7 @@ import Component from './LibJS/Component.js';
 
 let com = new Component();
 
-let dlina = 5;
+let dlina = 1;
 
 
 
